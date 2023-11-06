@@ -40,8 +40,6 @@
   color:  blue;
 }
 
-
-
 @media only screen and (max-width: 600px) {
   .footer-div {
     width: fit-content;

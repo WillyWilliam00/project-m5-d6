@@ -6,13 +6,12 @@ import { DotSpinner } from "@uiball/loaders";
 import ThemeContext from "../Context/theme";
 
 
-function ModalComment({ selected, setSelected }) {
+function ModalComment({ selected }) {
   const [allComment, setAllComment] = useState([]);
   const [loading, setLoading] = useState();
   const { dark } = useContext(ThemeContext);
 
   
-  console.log(selected)
 
   const getAllComment = useCallback(() => {
     setLoading(true);
@@ -32,6 +31,8 @@ function ModalComment({ selected, setSelected }) {
     getAllComment();
   }, [getAllComment]);
 
+
+
   return (
     <>
         <div className={dark ? "bg-dark" : ""} >
@@ -45,12 +46,11 @@ function ModalComment({ selected, setSelected }) {
                   color="black"
                 />
               )}
-              {!loading && (
+              {!loading && 
+              allComment.length === 0 ? <h3 className={dark ? "dark-mode" : ""}>Non ci sono ancora recensioni!</h3> : 
                 <CommentList
                   getAllComment={getAllComment}
-                  allComment={allComment}
-                />
-              )}
+                  allComment={allComment}/>}
             </Row>
           </Container>
           <Container style={{ paddingTop: "10px" }}>
