@@ -41,7 +41,7 @@ const { dark } = useContext(ThemeContext);
         xs={12}
         style={{
           marginBlock: 5,
-          borderTop: "1px solid black",
+          borderTop: "1px solid lightgrey",
           paddingTop: "10px",
         }}
         className="d-flex justify-content-between align-items-start"
