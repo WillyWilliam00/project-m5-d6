@@ -26,11 +26,7 @@ export default function SingleBook({img, title, asin, selected, setSelected, set
                 } else {
                     setTitolo("");
                     setSelected("")
-                }
-                
-                
-                
-                selected !== asin ? setTitolo(title) : setTitolo(""); selected !== asin ? setSelected(asin) : setSelected("")}} 
+                }}} 
                className="img-fluid"
            />
            
